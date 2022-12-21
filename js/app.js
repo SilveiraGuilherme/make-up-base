@@ -35,7 +35,6 @@ function loadCombo(element, data) {
   );
 }
 
-//EXEMPLO DO CÓDIGO PARA UM PRODUTO
 function productItem(product) {
   productBrands = productBrands.concat([product.brand]);
   productTypes = productTypes.concat([product.product_type]);
@@ -52,18 +51,16 @@ function productItem(product) {
     <h1 class="product-name">${product.name}</h1>
     <div class="product-brands"><span class="product-brand background-brand">${
       product.brand
-    }</span>
-<span class="product-brand background-price">R$${(
+    }</span><span class="product-brand background-price">R$${(
     parseFloat(product.price) * 5.5
   ).toFixed(2)}</span></div>
   </section>
   <section class="product-details">
   ${loadDetails(product)}
   </section>
-</div>`;
+  </div>`;
 }
 
-//EXEMPLO DO CÓDIGO PARA OS DETALHES DE UM PRODUTO
 function loadDetails(product) {
   let details = ["brand", "price", "rating", "category", "product_type"];
 
